@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyATbHLEJIxXo3yLBciyu5I8mFKIo6Ewjgw'
     })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
