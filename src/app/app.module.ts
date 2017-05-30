@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
+import {GoogleService} from "./google.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { AppComponent } from './app.component';
     })
 
   ],
-  providers: [],
+  providers: [GoogleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
