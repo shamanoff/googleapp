@@ -6,10 +6,12 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
 import {GoogleService} from "./google.service";
+import { NguiDatetimePickerModule } from '@ngui/datetime-picker';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -17,7 +19,8 @@ import {GoogleService} from "./google.service";
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyATbHLEJIxXo3yLBciyu5I8mFKIo6Ewjgw'
-    })
+    }),
+    NguiDatetimePickerModule
 
   ],
   providers: [GoogleService],

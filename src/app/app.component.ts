@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {GoogleService} from "./google.service";
-import { Response } from '@angular/http';
 import * as _ from "lodash";
 
 @Component({
@@ -9,15 +8,16 @@ import * as _ from "lodash";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private gserv: GoogleService){}
+
   coordinates: Object = {
     lat:32.0804437,
     lng:34.804843
   };
-  street: string = '';
-  city: string = '';
-/*  lat: number = 32.0804437;
-  lng: number = 34.804843;*/
+
+  street: string;
+  city: string;
+
+  constructor(private gserv: GoogleService){}
 
   onGetInfo(){
     this.gserv.getInfo(this.street, this.city)
@@ -29,6 +29,7 @@ export class AppComponent {
          },
         (error)=> console.log(error)
       );
-
+this.street = '';
+this.city = '';
   }
 }

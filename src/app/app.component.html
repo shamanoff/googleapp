@@ -1,8 +1,26 @@
-<sebm-google-map [latitude]="coordinates.lat" [longitude]="coordinates.lng">
-  <sebm-google-map-marker [latitude]="coordinates.lat" [longitude]="coordinates.lng"></sebm-google-map-marker>
-</sebm-google-map>
-<input type="text" [(ngModel)]="street" placeholder="street">
-<input type="text" [(ngModel)]="city" placeholder="city">
-<input type="button" class="button" value="Send" (click)="onGetInfo()">
+<div class="row expanded">
+  <div class="small-12 medium-2 columns">
+    <h2>Your Address</h2>
+    <input type="text" [(ngModel)]="street" placeholder="Street" >
+    <input type="text" [(ngModel)]="city" placeholder="City" >
+
+
+
+ <!--   <input type="text"
+           placeholder="Date"
+           ngui-datetime-picker
+           date-only="true" />-->
+
+    <input type="button" class="button" value="Send" (click)="onGetInfo()">
+  </div>
+  <div class="small-12 medium-10 columns">
+    <sebm-google-map [latitude]="coordinates.lat" [longitude]="coordinates.lng" [zoom]="13">
+      <sebm-google-map-marker [latitude]="coordinates.lat" [longitude]="coordinates.lng"></sebm-google-map-marker>
+    </sebm-google-map>
+  </div>
+</div>
+
+
+
 
 
